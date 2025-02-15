@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+       
+        
+    
+        header {
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+
+        
+
+        /* Scrollable navigation bar */
+        .navigation {
+            width: 100%;
+            display: flex;
+            overflow-x: auto;
+            background-color: #34495e;
+            white-space: nowrap;
+            padding: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navigation a {
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+        }
+        .navigation a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Content styling */
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .article {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .article h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        .article p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #7f8c8d;
+        }
+        .article-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        .article-footer button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .article-footer button:hover {
+            background-color: #c0392b;
+        }
+        .article-footer .share-btn {
+            background-color: #3498db;
+        }
+        .article-footer .share-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .navigation a {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+            .article h2 {
+                font-size: 1.5rem;
+            }
+            .article p {
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .navigation a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+            .article h2 {
+                font-size: 1.2rem;
+            }
+            .article p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <header>
+        <h1>World Platform</h1>
+        <p>Your News, Your World</p>
+    </header>
+
+    <div class="navigation">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#videos">Videos</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#sports">Sports</a>
+        <a href="#technology">Technology</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="content">
+        <div class="article" id="home">
+            <h2>Breaking News: Global Economic Trends in 2025</h2>
+            <p>The global economy is expected to undergo significant transformations in 2025. Factors like technology advancements, shifting political dynamics, and environmental challenges will shape the future. Experts predict...</p>
+            <div class="article-footer">
+                <button onclick="openNewTab('news1')">Read More</button>
+                <button class="share-btn">Share</button>
+            </div>
+        </div>
+
+    <div class="content">
+        <div class="article" id="">
+            <div class="article footer">
+            <a href="#" onclick="openNewTab('story')">story</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNPpM4uYSZKBntbutCdjEDD62uAmfkQ_M4_TpwjCnOegTIWQ/viewform?usp=dialog" onclick="openNewTab('form')">form</a>
+        </div>
+
+        </div>
+
+    </div>
+
+        <div class="article" id="news">
+            <h2>Sports Update: World Cup 2025 Preview</h2>
+            <p>The 2025 World Cup is gearing up to be one of the most exciting in history. Teams from around the world are preparing for the event, with some of the biggest names in football aiming for glory...</p>
+            <div class="article-footer">
+                <button onclick="openNewTab('news2')">Read More</button>
+                <button class="share-btn">Share</button>
+            </div>
+        </div>
+
+        <div class="article" id="videos">
+            <h2>Technology Breakthrough: AI and Future Innovations</h2>
+            <p>Artificial Intelligence is poised to revolutionize multiple industries in the coming years. In 2025, we can expect significant breakthroughs in automation, healthcare, and personal technology...</p>
+            <div class="article-footer">
+                <button onclick="openNewTab('news3')">Read More</button>
+                <button class="share-btn">Share</button>
+            </div>
+        </div>
+
+        <!-- Add more articles as needed -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 World Platform | All Rights Reserved</p>
+        <div class="footer">
+            <a href="#" onclick="openNewTab('privacy')">Privacy & Terms</a>
+        </div>
+        
+    </footer>
+
+    <script>
+        // Function to open a new tab-like window
+        function openNewTab(newsId) {
+            // Create a new window with specified features (like a full-size window)
+            const newWindow = window.open("", "_blank", "width=1000,height=800,scrollbars=yes");
+
+            // Add the content for each article in the new window
+            if(newsId === 'news1') {
+                newWindow.document.write(`
+                    <html>
+                        <head><title>Breaking News: Global Economic Trends in 2025</title></head>
+                        <body>
+                            <h1>Breaking News: Global Economic Trends in 2025</h1>
+                            <p>The global economy is expected to undergo significant transformations in 2025. Factors like technology advancements, shifting political dynamics, and environmental challenges will shape the future. Experts predict...</p>
+                            <p>Additional content, articles, and links can be added here. This is where videos, more articles, or other information about the topic can be shown.</p>
+                            <video width="100%" controls>
+                                <source src="c:\Users\DELL\OneDrive\Videos\WhatsApp Video 2024-07-22 at 08.39.12_e38064b0.mp4" type="video/mp4">
+                              
+                            </video>
+                        </body>
+                    </html>
+                `);
+            } else if(newsId === 'news2') {
+                newWindow.document.write(`
+                    <html>
+                        <head><title>Sports Update: World Cup 2025 Preview</title></head>
+                        <body>
+                            <h1>Sports Update: World Cup 2025 Preview</h1>
+                            <p>The 2025 World Cup is gearing up to be one of the most exciting in history. Teams from around the world are preparing for the event, with some of the biggest names in football aiming for glory...</p>
+                            <p>Here you can add more details, videos, links, etc., all related to the World Cup and upcoming matches.</p>
+                        </body>
+                    </html>
+                `);
+            } else if(newsId === 'news3') {
+                newWindow.document.write(`
+                    <html>
+                        <head><title>Technology Breakthrough: AI and Future Innovations</title></head>
+                        <body>
+                            <h1>Technology Breakthrough: AI and Future Innovations</h1>
+                            <p>Artificial Intelligence is poised to revolutionize multiple industries in the coming years. In 2025, we can expect significant breakthroughs in automation, healthcare, and personal technology...</p>
+                            <p>Additional content such as research articles, video interviews with experts, and more can be added here.</p>
+                            <iframe width="100%" height="400px" src="your_video_link.mp4"></iframe>
+                        </body>
+                    </html>
+                `);
+            } else if(newsId === 'privacy') {
+                newWindow.document.write(`
+                <html>
+                    <head><title>Privacy and terms and conditions  </title></head>
+                    <body>
+                        <h1> privacy </h1>
+                        </body>
+                    </html>
+                `);
+            } else if(newsId === 'story') {
+                newWindow.document.write(`
+                <html>
+                    <head><title>Story</title></head>
+                    <body>
+                       <h1> story </h1>
+                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ2cEsJzThMXH4kG5_FgnYrBhQWtKJWg5eOw&s" alt="image" width="300">
+                    </body>
+                    </html>
+                `)
+            } else if(newsId === 'form') {
+                newWindow.document.write(`
+                <html>
+                    <head><title>Form</title></head>
+                    <body>
+                        <h1> form </h1>
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNPpM4uYSZKBntbutCdjEDD62uAmfkQ_M4_TpwjCnOegTIWQ/viewform?usp=dialog" width="100%" height="100%"></iframe>
+                    </body>
+                    </html>
+                `)
+            }
+        }
+    </script>
+    
+   
+</body>
+</html>
